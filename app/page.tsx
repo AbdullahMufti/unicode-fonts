@@ -801,7 +801,7 @@ const Home = () => {
       <br />
       <div>Selected Number style</div>
       <select
-        onClick={(e) => setNumberStyle(e.target.value)}
+        onClick={(e) => console.log((e.target as HTMLTextAreaElement).value)}
         style={{ color: "black", backgroundColor: "white" }}>
         <option style={{ color: "black", backgroundColor: "white" }} value={0}>
           {NumbersData[0]}
