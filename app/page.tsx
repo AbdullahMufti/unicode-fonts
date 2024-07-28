@@ -792,6 +792,26 @@ const Home = () => {
       }
     }
   };
+  const GetSIndexRandom = (element: string) => {
+    const i = Math.floor(Math.random() * 12);
+    const indx = ABCIndex.filter((el) => el.value === element);
+    if (indx.toString() === "") {
+      console.log(indx.toString());
+      if (
+        ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].includes(element)
+      ) {
+        return NumbersData[NumberStyle][parseInt(element)];
+      } else {
+        return element;
+      }
+    } else {
+      if (indx[0]) {
+        return FontData[i][indx[0].id];
+      } else {
+        element;
+      }
+    }
+  };
 
   return (
     <div className="md:mx-10 mx-2 my-5 ">
@@ -831,11 +851,7 @@ const Home = () => {
         <div>
           {SmallText.map((element, ind) => (
             <span key={ind}>
-              {element !== " " ? (
-                GetSIndex(element, 0)
-              ) : (
-                <>&nbsp;&nbsp;&nbsp;</>
-              )}
+              {element !== " " ? GetSIndex(element, 0) : <>&nbsp;</>}
             </span>
           ))}
         </div>
@@ -843,11 +859,7 @@ const Home = () => {
         <div>
           {SmallText.map((element, ind) => (
             <span key={ind}>
-              {element !== " " ? (
-                GetSIndex(element, 1)
-              ) : (
-                <>&nbsp;&nbsp;&nbsp;</>
-              )}
+              {element !== " " ? GetSIndex(element, 1) : <>&nbsp;</>}
             </span>
           ))}
         </div>
@@ -855,11 +867,7 @@ const Home = () => {
         <div>
           {SmallText.map((element, ind) => (
             <span key={ind}>
-              {element !== " " ? (
-                GetSIndex(element, 2)
-              ) : (
-                <>&nbsp;&nbsp;&nbsp;</>
-              )}
+              {element !== " " ? GetSIndex(element, 2) : <>&nbsp;</>}
             </span>
           ))}{" "}
         </div>{" "}
@@ -867,11 +875,7 @@ const Home = () => {
         <div>
           {SmallText.map((element, ind) => (
             <span key={ind}>
-              {element !== " " ? (
-                GetSIndex(element, 3)
-              ) : (
-                <>&nbsp;&nbsp;&nbsp;</>
-              )}
+              {element !== " " ? GetSIndex(element, 3) : <>&nbsp;</>}
             </span>
           ))}{" "}
         </div>{" "}
@@ -879,11 +883,7 @@ const Home = () => {
         <div>
           {SmallText.map((element, ind) => (
             <span key={ind}>
-              {element !== " " ? (
-                GetSIndex(element, 4)
-              ) : (
-                <>&nbsp;&nbsp;&nbsp;</>
-              )}
+              {element !== " " ? GetSIndex(element, 4) : <>&nbsp;</>}
             </span>
           ))}{" "}
         </div>{" "}
@@ -891,11 +891,7 @@ const Home = () => {
         <div>
           {SmallText.map((element, ind) => (
             <span key={ind}>
-              {element !== " " ? (
-                GetSIndex(element, 5)
-              ) : (
-                <>&nbsp;&nbsp;&nbsp;</>
-              )}
+              {element !== " " ? GetSIndex(element, 5) : <>&nbsp;</>}
             </span>
           ))}{" "}
         </div>{" "}
@@ -903,11 +899,7 @@ const Home = () => {
         <div>
           {SmallText.map((element, ind) => (
             <span key={ind}>
-              {element !== " " ? (
-                GetSIndex(element, 6)
-              ) : (
-                <>&nbsp;&nbsp;&nbsp;</>
-              )}
+              {element !== " " ? GetSIndex(element, 6) : <>&nbsp;</>}
             </span>
           ))}{" "}
         </div>{" "}
@@ -915,11 +907,7 @@ const Home = () => {
         <div>
           {SmallText.map((element, ind) => (
             <span key={ind}>
-              {element !== " " ? (
-                GetSIndex(element, 7)
-              ) : (
-                <>&nbsp;&nbsp;&nbsp;</>
-              )}
+              {element !== " " ? GetSIndex(element, 7) : <>&nbsp;</>}
             </span>
           ))}{" "}
         </div>{" "}
@@ -927,11 +915,7 @@ const Home = () => {
         <div>
           {SmallText.map((element, ind) => (
             <span key={ind}>
-              {element !== " " ? (
-                GetSIndex(element, 8)
-              ) : (
-                <>&nbsp;&nbsp;&nbsp;</>
-              )}
+              {element !== " " ? GetSIndex(element, 8) : <>&nbsp;</>}
             </span>
           ))}{" "}
         </div>{" "}
@@ -939,11 +923,7 @@ const Home = () => {
         <div>
           {SmallText.map((element, ind) => (
             <span key={ind}>
-              {element !== " " ? (
-                GetSIndex(element, 9)
-              ) : (
-                <>&nbsp;&nbsp;&nbsp;</>
-              )}
+              {element !== " " ? GetSIndex(element, 9) : <>&nbsp;</>}
             </span>
           ))}{" "}
         </div>{" "}
@@ -951,11 +931,7 @@ const Home = () => {
         <div>
           {SmallText.map((element, ind) => (
             <span key={ind}>
-              {element !== " " ? (
-                GetSIndex(element, 10)
-              ) : (
-                <>&nbsp;&nbsp;&nbsp;</>
-              )}
+              {element !== " " ? GetSIndex(element, 10) : <>&nbsp;</>}
             </span>
           ))}{" "}
         </div>
@@ -963,11 +939,7 @@ const Home = () => {
         <div>
           {SmallText.map((element, ind) => (
             <span key={ind}>
-              {element !== " " ? (
-                GetSIndex(element, 11)
-              ) : (
-                <>&nbsp;&nbsp;&nbsp;</>
-              )}
+              {element !== " " ? GetSIndex(element, 11) : <>&nbsp;</>}
             </span>
           ))}{" "}
         </div>{" "}
@@ -975,11 +947,15 @@ const Home = () => {
         <div>
           {SmallText.map((element, ind) => (
             <span key={ind}>
-              {element !== " " ? (
-                GetSIndex(element, 12)
-              ) : (
-                <>&nbsp;&nbsp;&nbsp;</>
-              )}
+              {element !== " " ? GetSIndex(element, 12) : <>&nbsp;</>}
+            </span>
+          ))}{" "}
+        </div>
+        <br />
+        <div>
+          {SmallText.map((element, ind) => (
+            <span key={ind}>
+              {element !== " " ? GetSIndexRandom(element) : <>&nbsp;</>}
             </span>
           ))}{" "}
         </div>
