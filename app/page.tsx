@@ -816,7 +816,7 @@ const Home = () => {
   return (
     <div className="md:mx-10 mx-2 my-5 ">
       <div className="text-3xl font-bold">
-        Unicode Font Varitions for Social Media Plateforms
+        Unicode Font Varitions for Social Media Platforms
       </div>
       <br />
       <div>Selected Number style</div>
